@@ -76,7 +76,7 @@ if page.status_code == 200:
                 }
                 print("Nova notícia encontrada:", dados["titulo"])
                 links_enviados.add(link)
-                #loop.run_until_complete(enviar_mensagem(dados))
+                loop.run_until_complete(enviar_mensagem(dados))
             else:
                 print("Notícia já enviada:", noticia.find("a").text)
     
