@@ -9,17 +9,19 @@ CANAL_USERNAME = "@noticiasg1"
 
 links_enviados = set()
 
+file = "data/links_enviados.json"
+
 def carrega_links_de_arquivo():
     global links_enviados  # Modifica a variável global
     try:
-        with open("links_enviados.json", "r") as f:
+        with open(file, "r") as f:
             links_enviados = set(json.load(f))
     except FileNotFoundError:
         links_enviados = set()
 
 def escreve_links_em_arquivo():
     global links_enviados  # Garante que estamos usando a variável global
-    with open("links_enviados.json", "w") as f:
+    with open(file, "w") as f:
         json.dump(list(links_enviados), f)
 
 async def enviar_mensagem(dados: dict):

@@ -1,0 +1,6 @@
+services:
+  g1-service:
+    build: .
+    container_name: g1-request
+    volumes:
+      - ./data:/app/data # Isso mapeia a pasta ./data no host para /app no container

@@ -1,3 +1,5 @@
 /.venv
 /links_enviados.json
 /script.ps1
+.env
+minhas_versoes.txt
