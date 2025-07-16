@@ -4,8 +4,10 @@ import requests
 import httpx
 import json
 
-TELEGRAM_TOKEN = "7646356506:AAH4ygxDAY1NFr6YRqTP6rukHlMz4Xr74J0"
-CANAL_USERNAME = "@noticiasg1"
+import os
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "")
+CANAL_USERNAME = os.getenv("CANAL_USERNAME", "")
 
 links_enviados = set()
 
